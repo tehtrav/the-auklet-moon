@@ -1,0 +1,19 @@
+{
+  "name": "the-auklet-moon",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A kid-friendly 3D Warrior Cats roleplay game in the browser.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "test": "node src/physics.test.mjs"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "vite": "^8.3.5"
+  }
+}
