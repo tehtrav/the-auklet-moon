@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>The Auklet Moon</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+
+    <!-- Start screen -->
+    <div id="start" class="overlay">
+      <div class="card">
+        <div class="moon-badge">🌙</div>
+        <h1>The Auklet Moon</h1>
+        <p class="sub">Welcome to <b>OceanClan</b>, the Clan by the sea.</p>
+        <h2>Choose your pelt</h2>
+        <div id="pelts" class="pelts"></div>
+        <button id="play" class="big">Start exploring 🐾</button>
+        <p class="tiny">Tip: turn your sound on for waves, seabirds and crickets!</p>
+      </div>
+    </div>
+
+    <!-- In-game HUD -->
+    <div id="hud" class="hidden">
+      <div id="clock" class="pill">☀️ Day</div>
+      <div id="place" class="pill place"></div>
+      <div class="corner">
+        <button id="btn-sound" class="round" title="Sound on/off">🔊</button>
+        <button id="btn-music" class="round" title="Music on/off">🎵</button>
+        <button id="btn-guide" class="round moon" title="Moonfur's Guide">🌙</button>
+      </div>
+      <div id="toast" class="toast"></div>
+      <div id="bubble" class="bubble">Mrrrow!</div>
+      <div id="help" class="help">
+        <b>How to play</b><br />
+        <kbd>W A S D</kbd> or arrows: walk<br />
+        <kbd>Shift</kbd>: run &nbsp; <kbd>Space</kbd>: jump<br />
+        Drag the mouse: look around &nbsp; Scroll: zoom<br />
+        <kbd>M</kbd>: meow &nbsp; Hold <kbd>T</kbd>: speed up time<br />
+        <span class="tiny">Press <kbd>H</kbd> to hide this</span>
+      </div>
+      <div class="touch-buttons">
+        <button id="btn-meow" class="round">😺</button>
+        <button id="btn-jump" class="round">⤒</button>
+      </div>
+      <div id="joystick"><div id="joystick-knob"></div></div>
+    </div>
+
+    <!-- Moonfur's guide -->
+    <div id="guide" class="overlay hidden">
+      <div class="card guide">
+        <button id="guide-close" class="close">✕</button>
+        <h1>🌙 Moonfur's Guide</h1>
+        <p><i>"Greetings, young one! I am Moonfur of StarClan. Let me show you around OceanClan's home."</i></p>
+        <h2>Places to find</h2>
+        <ul>
+          <li><b>The Highrock</b> in the middle of camp. Jump up the stepping stones to reach the top!</li>
+          <li><b>The secret tunnel</b> in front of the Highrock leads down to the <b>Leader's Cave</b>.</li>
+          <li><b>The dens</b>: Warriors', Apprentices', Elders' and the Nursery. Walk inside!</li>
+          <li><b>The beach and ocean</b>: OceanClan cats can swim. Try it!</li>
+          <li><b>Tide pools</b> and <b>sea caves</b> along the shore.</li>
+        </ul>
+        <h2>Day and night</h2>
+        <p>A whole day and night takes 20 minutes. Watch the sun rise over the ocean and the moon come out at night. Hold <kbd>T</kbd> to make time go faster.</p>
+        <h2>Coming soon</h2>
+        <p>MoonClan and SunClan, playing with friends, hunting, fighting, accessories and more!</p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
